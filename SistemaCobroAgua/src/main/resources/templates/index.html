@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+</head>
+
+<body>
+	<h1 th:text="${titulo}" ></h1>
+
+		<div class="col-lg-12 col-md-12 col-sm-12">
+		
+		<table class="table table-striped" style="margin-left: 30px !important; margin-right: 30px !important;">
+		    <thead>
+		    <tr>
+		        <th>No</th>
+		        <th>Nombre</th>
+		        <th>Apellido Paterno</th>
+		        <th>Apellido Materno</th>
+		    </tr>
+		    </thead>
+		    <tbody>
+		    <tr th:each="u : ${lista}">
+		    	 <td th:text="${u.user_n}"></td>
+		        <td th:text="${u.nombre}"></td>
+		        <td th:text="${u.apPaterno}"></td>
+		        <td th:text="${u.apMaterno}"></td>
+		    </tr>
+		    </tbody>
+		</table>
+		
+		</div >
+
+</body>
+
+</html>
