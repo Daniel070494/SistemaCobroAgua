@@ -33,6 +33,18 @@ public class UsuarioController {
 		
 		mv.addObject("titulo", "Sistema de cobro de agua potable");
 		mv.addObject("lista", lista);
+		mv.addObject("nombre", "Daniel");
+		
+		return mv;
+	}
+	
+	@RequestMapping(value = {"/login"}, method = RequestMethod.GET)
+	public ModelAndView login() {
+		
+		ModelAndView mv = new ModelAndView("login");
+		
+
+		mv.addObject("nombre", "Daniel");
 		
 		return mv;
 	}
