@@ -37,15 +37,4 @@ public class UsuarioController {
 		
 		return mv;
 	}
-	
-	@RequestMapping(value = {"/login"}, method = RequestMethod.GET)
-	public ModelAndView login() {
-		
-		ModelAndView mv = new ModelAndView("login");
-		
-
-		mv.addObject("nombre", "Daniel");
-		
-		return mv;
-	}
 }
